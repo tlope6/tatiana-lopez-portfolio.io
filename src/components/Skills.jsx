@@ -1,6 +1,8 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
+import SkillBadge from "./SkillBadge";
+import { SKILLS } from "../data/skills";
 
-function Skills() {
+export default function Skills() {
   const [ref, isVisible] = useRevealOnScroll(0.1);
 
   return (

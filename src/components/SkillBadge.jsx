@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState } from "react";
+import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
-function SkillBadge({ name, delay }) {
+
+export default function SkillBadge({ name, delay }) {
   const [ref, isVisible] = useRevealOnScroll(0.1);
   const [hovered, setHovered] = useState(false);
 

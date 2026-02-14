@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
+import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
 
-function Contact() {
-    const [ref, invisible] = useRevealOnScroll(0.15);
+export default function Contact() {
+    const [ref, isVisible] = useRevealOnScroll(0.15);
 
     const links = [
         {label : "Email", href: "mailto:Tatianamlopez27@gmail.com" },

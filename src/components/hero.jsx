@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 
-function Hero () {
+export default function Hero () {
     const [loaded, setLoaded] = useState(false);
 
 

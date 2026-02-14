@@ -1,11 +1,21 @@
+import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 import ProjectCard from "./ProjectCard";
+import { PROJECTS } from "../data/projects";
 
-
-function Projects() {
+export default function Projects() {
   const [ref, isVisible] = useRevealOnScroll(0.1);
 
   return (
-    <section id="projects" style={{ padding: "80px 20px", maxWidth: 1100, margin: "auto", position: "relative", zIndex: 1 }}>
+    <section
+      style={{
+        padding: "120px 20px 80px",
+        maxWidth: 1100,
+        margin: "auto",
+        position: "relative",
+        zIndex: 1,
+        minHeight: "100vh",
+      }}
+    >
       <h2
         ref={ref}
         style={{
