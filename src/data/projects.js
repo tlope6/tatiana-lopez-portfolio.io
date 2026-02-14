@@ -1,4 +1,6 @@
 
+import globalStudios from "../assets/globalStudios.png";
+
 export const PROJECTS = [
     {
         id : 1,
@@ -7,8 +9,8 @@ export const PROJECTS = [
         "An end-to-end machine learning application that analyzes user-uploaded audio to infer mood and genre, then generates personalized music recommendations using the Spotify Web API.",
         link : "https://github.com/tlope6/MoodFlow-AI",
         tags : ["Python", "ML", "Spotify API"],
-        demo : "too be dated", 
-        liveLink : "too be dated",
+        image : null, 
+        liveLink : null,
     },
     {
 
@@ -18,8 +20,8 @@ export const PROJECTS = [
         "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging.",
         link : "https://github.com/tlope6/Say-Cheese-",
         tags :  ["Python", "OpenCV", "Computer Vision"],
-        demo : "too be dated", 
-        liveLink : "too be dated",
+        demo : null, 
+        liveLink : null,
     },
     {
         id : 3, 
@@ -28,7 +30,7 @@ export const PROJECTS = [
         "An interactive 3D Globe website that allows users from all around the entertainment industry to connect with one another. ", 
         link: "https://github.com/tlope6/GlobalStudios", 
         tags: ["React", "Three.js", "SQL", "Supabase" ],
-        demo: "too be dated",
+        image: globalStudios,
         liveLink: "https://globalstudios-66e31e84.aedify.ai/",
         
     },

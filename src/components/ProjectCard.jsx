@@ -36,30 +36,31 @@ export default function ProjectCard({ project, delay }) {
         gap: 12,
       }}
     >
-      {/* Demo video embed */}
-      {project.demo && (
-        <div
-          style={{
-            borderRadius: 12,
-            overflow: "hidden",
-            marginBottom: 4,
-            aspectRatio: "16/9",
-            border: "1px solid rgba(255,255,255,0.08)",
-          }}
-        >
-          <iframe
-            src={project.demo}
-            title={project.title + " demo"}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media"
-            allowFullScreen
-            style={{
-              width: "100%",
-              height: "100%",
-              border: "none",
-            }}
-          />
-        </div>
-      )}
+      {/* image embedded */}
+      {project.image && (
+            <div
+                style={{
+                borderRadius: 12,
+                overflow: "hidden",
+                marginBottom: 4,
+                border: "1px solid rgba(255,255,255,0.08)",
+                }}
+            >
+                <img
+                src={project.image}
+                alt={project.title}
+                style={{
+                    width: "100%",
+                    height: 180,
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.5s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+                onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
+                />
+            </div>
+        )}
 
       <h3
         style={{
