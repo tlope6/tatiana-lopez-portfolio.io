@@ -1,16 +1,16 @@
 
 import globalStudios from "../assets/globalStudios.png";
-
+import dream from "../assets/dream.png"
 export const PROJECTS = [
     {
         id : 1,
-        title : "MoodFlow AI",
+        title : "Dream Analyzer",
         description :
-        "An end-to-end machine learning application that analyzes user-uploaded audio to infer mood and genre, then generates personalized music recommendations using the Spotify Web API.",
-        link : "https://github.com/tlope6/MoodFlow-AI",
-        tags : ["Python", "ML", "Spotify API"],
-        image : null, 
-        liveLink : null,
+        "A dream journal that analyzes your nightly visions using natural language processing to surface symbols, emotions, and connections you'd never catch on your own",
+        link : "https://github.com/tlope6/dream_analyzer",
+        tags : ["Python", "CSS", "HTML"],
+        image : dream, 
+        liveLink : "https://dreamanalyzer-g5dprbfrbyb5dku8oumg99.streamlit.app/",
     },
     {
 
