@@ -8,7 +8,7 @@ export const PROJECTS = [
         description :
         "A dream journal that analyzes your nightly visions using natural language processing to surface symbols, emotions, and connections you'd never catch on your own",
         link : "https://github.com/tlope6/dream_analyzer",
-        tags : ["Python", "CSS", "HTML"],
+        tags : ["Python", "CSS", "HTML", "Streamlit", "Plotly", "scikit-learn", "Hugging Face Transformers" ],
         image : dream, 
         liveLink : "https://dreamanalyzer-g5dprbfrbyb5dku8oumg99.streamlit.app/",
     },
