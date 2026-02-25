@@ -1,6 +1,7 @@
 
 import globalStudios from "../assets/globalStudios.png";
 import dream from "../assets/dream.png"
+import sayCheese from "../assets/say-cheese.png"
 export const PROJECTS = [
     {
         id : 1,
@@ -19,7 +20,7 @@ export const PROJECTS = [
         description : "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging.",
         link : "https://github.com/tlope6/Say-Cheese-",
         tags :  ["Python", "OpenCV", "Computer Vision"],
-        demo : null, 
+        image : sayCheese,
         liveLink : null,
     },
     {
