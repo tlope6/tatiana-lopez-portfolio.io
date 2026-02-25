@@ -17,7 +17,7 @@ export const PROJECTS = [
 
         id : 2,
         title : "Say Cheese?",
-        description : "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging.",
+        description : "An interactive Python application that uses hand gestures and facial detection to control a live camera interface, blending computer vision, creative visuals, and data logging. Currently in progess so stay in tune...",
         link : "https://github.com/tlope6/Say-Cheese-",
         tags :  ["Python", "OpenCV", "Computer Vision"],
         image : sayCheese,
