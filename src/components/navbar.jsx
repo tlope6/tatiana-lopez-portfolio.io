@@ -1,20 +1,24 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-
-const NAV_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "Projects", to: "/projects" },
-  { label: "Skills", to: "/skills" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
-];
+import { NAV_LINKS } from "../data/skills";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const [active, setActive] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60);
+
+      const sections = ["contact", "about", "skills", "projects"];
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 150) {
+          setActive(id);
+          return;
+        }
+      }
+      setActive("");
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -39,18 +43,19 @@ export default function Navbar() {
       }}
     >
       {NAV_LINKS.map((link) => {
-        const isActive = location.pathname === link.to;
+        const sectionId = link.href.replace("#", "");
+        const isActive = active === sectionId;
         return (
-          <Link
+          <a
             key={link.label}
-            to={link.to}
+            href={link.href}
             style={{
               color: isActive ? "#a8c6ff" : "#d5d9ff",
               textDecoration: "none",
               fontWeight: 600,
               letterSpacing: "0.5px",
               fontSize: "0.95rem",
-              transition: "0.3s",
+              transition: "all 0.3s ease",
               textShadow: isActive
                 ? "0 0 18px rgba(168,198,255,0.6)"
                 : "none",
@@ -62,8 +67,7 @@ export default function Navbar() {
             onMouseEnter={(e) => {
               if (!isActive) {
                 e.target.style.color = "#a8c6ff";
-                e.target.style.textShadow =
-                  "0 0 18px rgba(168,198,255,0.6)";
+                e.target.style.textShadow = "0 0 18px rgba(168,198,255,0.6)";
               }
             }}
             onMouseLeave={(e) => {
@@ -74,7 +78,7 @@ export default function Navbar() {
             }}
           >
             {link.label}
-          </Link>
+          </a>
         );
       })}
     </nav>

@@ -10,7 +10,7 @@ export default function Hero () {
     }, []);
 
     return (
-        <div
+        <div id = "hero"
             style={{
                 height: "100vh",
                 display: "flex",
@@ -88,7 +88,7 @@ export default function Hero () {
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="None"
+                    fill="none"
                     stroke="#b4bfea"
                     strokeWidth="2"
                 >

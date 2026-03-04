@@ -1,13 +1,12 @@
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 import githubpic from "../assets/githubpic.png"
 
-// For now, use a placeholder:
 
 export default function About() {
   const [ref, isVisible] = useRevealOnScroll(0.15);
 
   return (
-    <section
+    <section id = "about"
       style={{
         padding: "120px 20px 80px",
         maxWidth: 900,

@@ -1,19 +1,19 @@
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
-import ProjectCard from "./ProjectCard";
+import ProjectShowcase from "./ProjectShowCase";
 import { PROJECTS } from "../data/projects";
 
 export default function Projects() {
-  const [ref, isVisible] = useRevealOnScroll(0.1);
+  const [ref, isVisible] = useRevealOnScroll(0.05);
 
   return (
     <section
+      id="projects"
       style={{
-        padding: "120px 20px 80px",
+        padding: "100px 20px 40px",
         maxWidth: 1100,
         margin: "auto",
         position: "relative",
         zIndex: 1,
-        minHeight: "100vh",
       }}
     >
       <h2
@@ -21,7 +21,7 @@ export default function Projects() {
         style={{
           textAlign: "center",
           fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
-          marginBottom: 50,
+          marginBottom: 20,
           background: "linear-gradient(135deg, #b5c8ff, #d8b4fe)",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
@@ -29,21 +29,32 @@ export default function Projects() {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? "translateY(0)" : "translateY(30px)",
           transition: "all 0.8s ease",
+          fontWeight: 700,
         }}
       >
         Projects
       </h2>
-      <div
+      <p
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: 25,
+          textAlign: "center",
+          color: "#6e7494",
+          fontSize: "0.95rem",
+          marginBottom: 50,
+          opacity: isVisible ? 1 : 0,
+          transition: "opacity 1s ease 0.3s",
         }}
       >
-        {PROJECTS.map((project, i) => (
-          <ProjectCard key={project.id} project={project} delay={i} />
-        ))}
-      </div>
+        A selection of things I've built
+      </p>
+
+      {PROJECTS.map((project, i) => (
+        <ProjectShowcase
+          key={project.id}
+          project={project}
+          index={i}
+          total={PROJECTS.length}
+        />
+      ))}
     </section>
   );
 }

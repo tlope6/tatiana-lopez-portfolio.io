@@ -1,7 +1,6 @@
-import { Routes, Route } from "react-router-dom";
 import StarfieldBackground from "./components/StarfieldBackground";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
@@ -48,14 +47,11 @@ export default function App() {
 
       <StarfieldBackground />
       <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Hero />
+      <Projects />
+      <Skills />
+      <About />
+      <Contact />
     </div>
   );
 }
