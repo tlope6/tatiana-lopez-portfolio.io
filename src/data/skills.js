@@ -10,6 +10,8 @@ export const SKILLS = [
   { name: "Git / GitHub", level: 85 },
   { name: "HTML", level: 85 },
   { name: "CSS", level: 80 },
+  { name: "F#", level: 30},
+  
 ];
 
 export const NAV_LINKS = [
