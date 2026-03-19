@@ -104,7 +104,7 @@ export default function About() {
               fontStyle: "italic",
             }}
           >
-            Currently exploring full-stack and data science.
+            Currently exploring full-stack and machine learning.
           </p>
         </div>
       </div>

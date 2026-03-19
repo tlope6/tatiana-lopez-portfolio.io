@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
       <Hero />
       <Projects />
       <Skills />
+      <Experience />
       <About />
       <Contact />
     </div>
