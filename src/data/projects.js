@@ -48,7 +48,7 @@ export const PROJECTS = [
     title: "Global Studios",
     subtitle: "WorldWide · Connection · Entertainment Industry",
     description:
-      "A financial app with an adventure theme that gathers user information to determine savings habits and financing goals, calculating leftover income after bills and taxes.",
+      "An interactive 3D Globe platform that allows users to be able to connect with people in the entertainment industry.",
     details: [
       "Built an interactive 3D globe in React/Three.js with raycasting hit detection, GeoJSON country rendering, and continent-coded map pins with hover/click interactions",
       "Developed a multi-filter talent search system querying profiles by country, city, role, experience level, and genre specialty with async data handling",
